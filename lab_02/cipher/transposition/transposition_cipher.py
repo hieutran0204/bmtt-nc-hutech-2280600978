@@ -12,7 +12,11 @@ class TranspositionCipher:
         return encrypted_text
 
     def decrypt(self, text, key):
+
         num_cols = (len(text) + key - 1) // key  # Số cột trong bảng mã
+
+        num_cols = (len(text) + key - 1)
+
         num_rows = key  # Số hàng trong bảng mã
         num_shaded_boxes = (num_cols * num_rows) - len(text)
 
@@ -27,4 +31,8 @@ class TranspositionCipher:
                 col = 0
                 row += 1
 
+
         return ''.join(decrypted_text)
+
+        return ''.join(decrypted_text)
+
